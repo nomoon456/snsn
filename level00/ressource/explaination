@@ -1,0 +1,6 @@
+-caesar encryption
+
+$> cat /usr/sbin/john
+cdiiddwpgswtgt
+
+caesar +11: nottoohardhere

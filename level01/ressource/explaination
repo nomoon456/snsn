@@ -1,0 +1,9 @@
+- cracking password
+
+Get the file /etc/passwd
+scp -P 4242 level01@[ip]:/etc/passwd .
+
+Use john the ripper on passwd
+john passwd
+
+Result: "abcdefg"

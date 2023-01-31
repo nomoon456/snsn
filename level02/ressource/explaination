@@ -1,0 +1,22 @@
+extract level02.pcap
+
+scp -P 4242 level02@[ip]:level02.pcap .
+
+open level02.pcap with wireshark and follow tcp stream
+ 
+ ```
+..%..%..&..... ..#..'..$..&..... ..#..'..$.. .....#.....'........... .38400,38400....#.SodaCan:0....'..DISPLAY.SodaCan:0......xterm.........."........!........"..".....b........b....	B.
+..............................1.......!.."......"......!..........."........"..".............	..
+.....................
+Linux 2.6.38-8-generic-pae (::ffff:10.1.1.2) (pts/10)
+
+..wwwbugs login: l.le.ev.ve.el.lX.X
+..
+Password: ft_wandr...NDRel.L0L
+.
+..
+Login incorrect
+wwwbugs login:
+```
+
+pwd: ft_wandr...NDRel.L0L

